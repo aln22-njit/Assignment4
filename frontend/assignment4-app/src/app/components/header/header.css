@@ -1,0 +1,10 @@
+header{
+    display: flex;
+    padding-inline: 16px;
+    padding-block: 8px;
+    background-color: rgb(64, 168, 202);
+    color: white;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+}
