@@ -1,0 +1,67 @@
+/* Body changes */
+
+body{
+    margin:0;
+    font-family:"Inter", "Helvetica Neue", Arial;
+}
+
+main{
+    max-width:var(--max-width);
+    margin:28px auto;
+    padding: 0 20px 80px;
+}
+
+/* Editing product template to look nice */
+.product-grid{
+    padding-top:50px;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px,1fr));
+    gap:29px;
+    align-items:start;
+}
+
+.product-template-card {
+    border: transparent;
+    width: 70%;
+    padding:20px;
+    border-radius: none;
+}
+
+.product-template-card-row{
+    margin-top:auto; 
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:8px;
+}
+
+.price{
+    font-size:26px;
+    font-weight:700;
+}
+
+.subject{
+    font-weight: bold;
+    padding-right: 20px;
+}
+
+#about-pd{
+    padding-top: 30px;
+}
+
+.purchase{
+    border-radius:20px;
+    background-color: black;
+    color: white
+}
+
+#productImg{
+    width: 80%; 
+    padding-left:10%;
+}
+
+#productName{
+    font-size: 50px;
+    font-family:"Inter", "Helvetica Neue", Arial;
+    font-style: bold;
+}
