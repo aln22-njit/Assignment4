@@ -16,6 +16,13 @@ export class Body{
     getItemService = inject(GetItem);
 
     
-    allItems$: Observable<string[][]> = inject(GetItem).getItem();
+    allItems$: Observable<string[][]> = this.getItemService.getItem();
+
+    selectedItem(item: string[]){
+      this.getItemService.currentItem = item;
+      console.log(this.getItemService.currentItem);
+
+      this.getItemService.sendItem();
+    }
     
 }

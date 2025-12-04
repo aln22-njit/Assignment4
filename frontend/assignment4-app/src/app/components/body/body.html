@@ -63,7 +63,7 @@
         <h3 class="card-title">${{ item[2] }}</h3>
         <h5 class="card-title">{{ item[0] }}</h5>
         <p class="card-text">{{ item[1] }}</p>
-        <a routerLink="purchase" class="btn btn-primary">Buy</a>
+        <a (click) = "selectedItem(item)"routerLink="purchase" class="btn btn-primary">Buy</a>
       </div>
     </div>
   </div>

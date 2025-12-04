@@ -3,6 +3,7 @@ const cors = require('cors');
 
 const app = express();
 app.use(cors());
+app.use(express.json());
 
 const port = 5500;
 
@@ -17,6 +18,14 @@ let items = [
 app.get("/api/getItem", (req, res) => {
     res.json(items);
 });
+
+app.post("/api/sendItem", (req,res) => {
+    let currentItemFromUser = req.body;
+
+    console.log(currentItemFromUser);
+});
+
+
 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
