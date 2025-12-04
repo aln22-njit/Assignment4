@@ -9,21 +9,21 @@
     </head>
 
     <body>
-        <div>
+        <div *ngIf="localCurrentItem$ | async as localCurrentItem;">
             
             <main>
                 <div class="product-grid">
                     <div class="main-left">
-                        <img src ="graphicCard.webp"  id = "productImg">
+                        <img [src] = "localCurrentItem[3]" id = "productImg">
                     </div>
                     <div class="product-template-main-right">
                         <form>
                             <div class="product-template-card">
                                 <div class="product-template-card-row">
-                                    <h3 style="font-weight:600" id = "productName">iPad</h3>
+                                    <h3 style="font-weight:600" id = "productName">{{ localCurrentItem[0] }}</h3>
                                     
                                 </div>
-                                <h4 class="price"></h4>
+                                <h4 class="price">${{ localCurrentItem[2] }}</h4>
                                 <p style="font-weight: bold; font-size: 16px;"></p>
                                 <a class="product-template-card-row" style="color: inherit; text-decoration: none;">
                                     
@@ -31,7 +31,7 @@
                                 
                                 
                                 <div class="d-grid gap-2">
-                                    <button onclick="" type="button" class="purchase">PURCHASE</button>
+                                    <button (click) = "submitClicked()" type="button" id ="submitOrder">Submit Order</button>
                                 </div>
                                 <div style="padding-top: 20px;">
                                     <h3 style="font-weight:450">Product details</h3>
@@ -48,7 +48,7 @@
                                 </div>
                                 <div id="about-pd">
                                     <h3 style="font-weight:450">About this item</h3>
-                                    <p>Holder</p>
+                                    <p>{{ localCurrentItem[1] }}</p>
                                 </div>
 
                             </div>
@@ -60,5 +60,9 @@
 
         </div>
         
+        
+
     </body>
+
+    
 </html>

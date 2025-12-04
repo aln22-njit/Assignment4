@@ -1,8 +1,8 @@
-import { Component, OnInit, inject } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { GetItem } from '../../services/get-item';
 import { CommonModule } from '@angular/common';
-import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-body',
@@ -16,7 +16,7 @@ export class Body{
     getItemService = inject(GetItem);
 
     
-    allItems$: Observable<string[][]> = this.getItemService.getItem();
+    allItems$ = this.getItemService.getItem();
 
     selectedItem(item: string[]){
       this.getItemService.currentItem = item;

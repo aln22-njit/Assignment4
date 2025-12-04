@@ -60,11 +60,12 @@
     <div class="card">
       <img [src]="item[3]" class="card-img-top" alt="image">
       <div class="card-body">
-        <h3 class="card-title">${{ item[2] }}</h3>
-        <h5 class="card-title">{{ item[0] }}</h5>
-        <p class="card-text">{{ item[1] }}</p>
+        <h3 id = "price" class="card-title"><strong>${{ item[2] }}</strong></h3>
+        <h5 id = "name" class="card-title"><em>{{ item[0] }}</em></h5>
+        <p id = "descript" class="card-text card-title">{{ item[1] }}</p>
         <a (click) = "selectedItem(item)"routerLink="purchase" class="btn btn-primary">Buy</a>
       </div>
     </div>
   </div>
 </div>
+
