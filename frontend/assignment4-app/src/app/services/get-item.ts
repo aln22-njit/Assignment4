@@ -14,8 +14,8 @@ export class GetItem {
 
   getItem(): Observable<string[][]>{
     const url = "http://localhost:5500/api/products"
-    return this.http.get<string[][]>(url);
     
+    return this.http.get<string[][]>(url);
   }
 
   sendItem(){
@@ -26,23 +26,22 @@ export class GetItem {
     error: err => console.error("POST error:", err)
   });
 
-
     console.log("Sent to server: " + this.currentItem);
+
   }
 
   getCurrentItem(){
     const url = "http://localhost:5500/api/selected-product";
 
     return this.http.get<string[]>(url);
+    
   }
 
   submitOrder(): Observable<{message: string}>{
     const url = "http://localhost:5500/api/submit-order";
 
     return this.http.post<{ message: string }>(url, this.currentItem);
-    
-
-    
+  
   }
 
   

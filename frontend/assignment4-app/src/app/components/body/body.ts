@@ -14,10 +14,9 @@ import { CommonModule } from '@angular/common';
 export class Body{
     
     getItemService = inject(GetItem);
-
-    
     allItems$ = this.getItemService.getItem();
 
+    
     selectedItem(item: string[]){
       this.getItemService.currentItem = item;
       console.log(this.getItemService.currentItem);

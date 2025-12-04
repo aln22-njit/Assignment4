@@ -1,5 +1,3 @@
-/* Body changes */
-
 body{
     margin:0;
     font-family:"Inter", "Helvetica Neue", Arial;
@@ -11,7 +9,7 @@ main{
     padding: 0 20px 80px;
 }
 
-/* Editing product template to look nice */
+
 .product-grid{
     padding-top:50px;
     display:grid;

@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 import { Home } from './components/home/home';
 import { Purchase } from './components/purchase/purchase';
 
-Home
+
 
 export const routes: Routes = [
     { 

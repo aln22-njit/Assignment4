@@ -1,7 +1,6 @@
 import { Component, signal } from '@angular/core';
-import {RouterOutlet } from '@angular/router';
-import { Header } from './components/header/header';
-import { Body } from './components/body/body';
+import { RouterOutlet } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
@@ -10,5 +9,5 @@ import { Body } from './components/body/body';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('assignment4-app');
+  
 }
